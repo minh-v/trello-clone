@@ -1,0 +1,30 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.card-list {
+  background-color: grey;
+  width: 300px;
+}
+
+.card-title {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.add-button {
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card-item-container {
+  padding: 10px;
+}
+
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
