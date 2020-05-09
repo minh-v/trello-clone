@@ -4,17 +4,21 @@ import "/styles/CardList.css";
 import CardAdd from "./CardAdd";
 import CardItem from "./CardItem";
 
-const CardList = (props) => {
-  const [title, setTitle] = useState("");
+const CardList = ({ title, items }) => {
+  const [cardTitle, setCardTitle] = useState("");
 
   useEffect(() => {
-    setTitle(props.title);
-  }, [props]);
+    setCardTitle(title);
+  }, [title]);
+
+  const cardItems = items.map((item, index) => {
+    return <CardItem title={item.title} key={index} />;
+  });
 
   return (
     <div className="card-list">
       <span className="card-title">{title}</span>
-      <CardItem title={"card title"} />
+      {cardItems}
       <CardAdd />
     </div>
   );
